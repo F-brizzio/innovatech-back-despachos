@@ -22,8 +22,8 @@ jobs:
       - name: Construir imagen Docker
         run: docker build -t lucianodelgado/innovatech-back-despachos:latest .
 
-      - name: Publicar imagen en Docker Hub
-        run: docker push lucianodelgado/innovatech-back-despachos:latest
+      - name: Construir imagen Docker
+        run: docker build -t lucianodelgado/innovatech-back-despachos:latest ./Springboot-API-REST-DESPACHO
 
       - name: Desplegar en EC2
         uses: appleboy/ssh-action@v1.0.0
